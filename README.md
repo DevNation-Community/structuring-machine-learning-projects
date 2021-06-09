@@ -58,9 +58,11 @@ Option 1 | 60% | 20% | 20%
 * And the rule of thumb is really to try to set the dev set to big enough for its purpose, which helps you evaluate different ideas and pick this up from AOP better. And the purpose of the test set is to help you evaluate your final cost. 
 ### When to change the dev/test set and metric?
 Sometimes the Metric + Dev set preferes algo A but the user and the creator prefers algo B according to the working, environment, etc. in this case you should change metrics
-Error = 
+Error =     
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1603).png) 
 
-A better error metric would be = 
+A better error metric would be =     
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1604).png) 
 
 * So the guideline is, if doing well on your metric and your current dev sets or dev and test sets' distribution, if that does not correspond to doing well on the application you actually care about, then change your metric and your dev test set.In other words, if we discover that your dev test set has these very high quality images but evaluating on this dev test set is not predictive of how well your app actually performs, because your app needs to deal with lower quality images, then that's a good time to change your dev test set so that your data better reflects the type of data you actually need to do well on.
 * Do not run for too long without any evaluation metric and dev set up because that can slow down the efficiency of what your team can iterate and improve your algorithm.
@@ -71,20 +73,26 @@ A better error metric would be =
   * Gain insights from manual error analysis as of why the human got it right
   * Better analysis of bias/variance
 ### Avoidable Bias
-Human level error is a proxy for Bayes error
+Human level error is a proxy for Bayes error    
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1605).png) 
 
-### Understanding human level performance
+### Understanding human level performance    
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1606).png) 
 
-So just to summarize what we've talked about. If you're trying to understand bias and variance where you have an estimate of human-level error for a task that humans can do quite well, you can use human-level error as a proxy or as a approximation for Bayes error.And so the difference between your estimate of Bayes error tells you how much avoidable bias is a problem, how much avoidable bias there is. And the difference between training error and dev error, that tells you how much variance is a problem, whether your algorithm's able to generalize from the training set to the dev set. And the big difference between our discussion here and what we saw in an earlier course was that instead of comparing training error to 0%,And just calling that the estimate of the bias. In contrast, in this video we have a more nuanced analysis in which there is no particular expectation that you should get 0% error. Because sometimes Bayes error is non zero and sometimes it's just not possible for anything to do better than a certain threshold of error.
+So just to summarize what we've talked about. If you're trying to understand bias and variance where you have an estimate of human-level error for a task that humans can do quite well, you can use human-level error as a proxy or as a approximation for Bayes error.And so the difference between your estimate of Bayes error tells you how much avoidable bias is a problem, how much avoidable bias there is. And the difference between training error and dev error, that tells you how much variance is a problem, whether your algorithm's able to generalize from the training set to the dev set. And the big difference between our discussion here and what we saw in an earlier course was that instead of comparing training error to 0%,And just calling that the estimate of the bias. In contrast, in this video we have a more nuanced analysis in which there is no particular expectation that you should get 0% error. Because sometimes Bayes error is non zero and sometimes it's just not possible for anything to do better than a certain threshold of error.    
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1607).png) 
 
 ### Surpassing human level performance
-Eg: 
+Eg:     
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1608).png) 
 
-What will the avoidable bias be in this? 
+What will the avoidable bias be in this?     
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1609).png) 
 
 Variance is the avoidable bias
 
-Eg 2: 
+Eg 2:     
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1610).png) 
 
 * once you've surpassed this 0.5% threshold, your options, your ways of making progress on the machine learning problem are just less clear. It doesn't mean you can't make progress, you might still be able to make significant progress
 
