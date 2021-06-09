@@ -120,7 +120,7 @@ Eg 2:
   * Look at the Dev Set: Create a table like this and mention in the column about the incorrectly labelled images
 if the % of total error is less then do not look into this matter as it will be a waste of your time    
 
-![image](https://github.com/schmithvillers/Structuring-Machine-Learning-Projects/blob/main/Screenshot%20(1624).png)    
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1624).png)    
 
 * Correcting incorrect dev/text set examples
   * Apply same process to your dev and test sets to make sure they continue to come from the same distribution
@@ -144,16 +144,16 @@ Disadvantage: your training distribution is different from your dev and test set
 * In the above situation a Training-dev set can be created: same distribution as training set but not used for training. Now the training error remains the same as 1% and the new training-dev error is 9%. The dev error was still 10%. This shows us that there is a variance problem here because the training-dev error was measured on data that comes from the same distribution as your training set. So you know that even though your neural network does well in a training set, it's just not generalizing well to data in the training-dev set which comes from the same distribution.
 * Let's look at a different example. Let's say the training error is 1%, and the training-dev error is 1.5%, but when you go to the dev set your error is 10%. So now, you actually have a pretty low variance problem, because when you went from training data that you've seen to the training-dev data that the neural network has not seen, the error increases only a little bit, but then it really jumps when you go to the dev set. So this is a data mismatch problem, where data mismatched. So this is a data mismatch problem,    
 
-![image](https://github.com/schmithvillers/Structuring-Machine-Learning-Projects/blob/main/Screenshot%20(1627).png)    
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1627).png)    
 
 * Bias/variance on mismatches training and de/test sets   
 
-![image](https://github.com/schmithvillers/Structuring-Machine-Learning-Projects/blob/main/Screenshot%20(1628).png)   
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1628).png)   
 
 * Sometimes instead of increasing the error from Human level to test error the error can decrease too
   * Example    
 
-![image](https://github.com/schmithvillers/Structuring-Machine-Learning-Projects/blob/main/Screenshot%20(1629).png)    
+![image](https://github.com/DevNation-Community/structuring-machine-learning-projects/blob/main/Screenshot%20(1629).png)    
 
 ### Addressing data mismatch
 * Carry out manual error analysis to try to understand difference between training and dev/test sets
